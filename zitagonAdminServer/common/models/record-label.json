@@ -1,0 +1,27 @@
+{
+  "name": "recordLabel",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "labelinfo": {
+      "type": "string"
+    },
+    "labelimg": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

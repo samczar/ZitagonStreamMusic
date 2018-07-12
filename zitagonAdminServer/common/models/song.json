@@ -1,0 +1,76 @@
+{
+  "name": "song",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "audio": {
+      "type": "string"
+    },
+    "video": {
+      "type": "string"
+    },
+    "lyrics": {
+      "type": "string"
+    },
+    "coverimage": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "single": {
+      "type": "string"
+    },
+    "genre": {
+      "type": [
+        "object"
+      ]
+    },
+    "featureArtist": {
+      "type": [
+        "object"
+      ]
+    },
+    "Albumname": {
+      "type": "string"
+    },
+    "artist": {
+      "type": [
+        "object"
+      ]
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "releasedyear": {
+      "type": "string"
+    },
+    "releasedmonth": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "artist": {
+      "type": "belongsTo",
+      "model": "artist",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "album": {
+      "type": "belongsTo",
+      "model": "album",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

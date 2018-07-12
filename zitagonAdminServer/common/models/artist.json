@@ -1,0 +1,55 @@
+{
+  "name": "artist",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "bio": {
+      "type": "string"
+    },
+    "picsUrl": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "created": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "songs": {
+      "type": "hasMany",
+      "model": "song",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "albums": {
+      "type": "hasMany",
+      "model": "album",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "singles": {
+      "type": "hasMany",
+      "model": "single",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

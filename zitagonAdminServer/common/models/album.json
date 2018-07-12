@@ -1,0 +1,50 @@
+{
+  "name": "album",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "artist": {
+      "type": [
+        "object"
+      ]
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "releasedyear": {
+      "type": "string"
+    },
+    "releasedmonth": {
+      "type": "string"
+    },
+    "created": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "songs": {
+      "type": "hasMany",
+      "model": "song",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
